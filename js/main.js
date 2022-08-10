@@ -19,29 +19,43 @@ elForm.addEventListener("submit", function(hodisa){
   if(elInput.value.length != 0){
     elInput = Number(elInput.value);
     if(!isNaN(elInput)){
-      let result1 = elInput / walk;
-
-      elParagraphWalk.textContent = Math.trunc(result1) + " soat";
-
-
-      let result2 = elInput / velo;
-
-      elParagraphVelo.textContent = Math.trunc(result2) + " soat";
+      let result1 = elInput / walk; // soat
+      let result11 = (result1 - Math.floor(result1)) * 60; // minut
+      alert(result1)
+      let result12 = (result11 - Math.floor(result11)) * 60  // sekund
 
 
-      let result3 = elInput / car;
-
-      elParagraphCar.textContent = Math.trunc(result3) + " soat";
+      elParagraphWalk.textContent = Math.floor(result1) + " soat " + Math.floor(result11) + " minut " + Math.floor(result12) + " sekund"
 
 
-      let result4 = elInput / airplane;
+      let result2 = elInput / velo; // soat
+      let result21 = (result2 - Math.floor(result2)) * 60; // minut
+      let result22 = (result21 - Math.floor(result21)) * 60  // sekund
 
-      elParagraphAirplane.textContent = Math.trunc(result4) + " soat";
+
+      elParagraphVelo.textContent = Math.floor(result2) + " soat " + Math.floor(result21) + " minut " + Math.floor(result22) + " sekund"
 
 
-      // elParagraphVelo.textContent = (elInput / velo) + " soat";
-      // elParagraphCar.textContent = (elInput / car) + " soat";
-      // elParagraphAirplane.textContent = (elInput / airplane) + " soat";
+
+      let result3 = elInput / car; // soat
+      let result31 = (result3 - Math.floor(result3)) * 60; // minut
+      let result32 = (result31 - Math.floor(result31)) * 60  // sekund
+
+
+      elParagraphCar.textContent = Math.floor(result3) + " soat " + Math.floor(result31) + " minut " + Math.floor(result32) + " sekund"
+
+
+
+
+      let result4 = elInput / airplane; // soat
+      let result41 = (result4 - Math.floor(result4)) * 60; // minut
+      let result42 = (result41 - Math.floor(result41)) * 60  // sekund
+
+
+      elParagraphAirplane.textContent = Math.floor(result4) + " soat " + Math.floor(result41) + " minut " + Math.floor(result42) + " sekund"
+
+
+
     }
     else{
       alert("Iltimos, raqamli ma'lumot kiriting...")
