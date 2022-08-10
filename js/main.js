@@ -21,7 +21,6 @@ elForm.addEventListener("submit", function(hodisa){
     if(!isNaN(elInput)){
       let result1 = elInput / walk; // soat
       let result11 = (result1 - Math.floor(result1)) * 60; // minut
-      alert(result1)
       let result12 = (result11 - Math.floor(result11)) * 60  // sekund
 
 
